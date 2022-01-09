@@ -1,4 +1,3 @@
-
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
@@ -6,28 +5,28 @@ import java.util.List;
 public class ListPerformanceEvaluation {
     
     private static void fillOutList(List list, int amountOfElements) {
-		for (int i = 0; i &lt; amountOfElements; i++) {
+		for (int i = 0;i< amountOfElements; i++) {
 			list.add(i);
 		}
 	}
 
 	public static void addElementsToBeginning(List list,
 			int numberOfElementsToAdd) {
-		for(int i = 0; i &lt; numberOfElementsToAdd; i++){
+		for(int i = 0; i < numberOfElementsToAdd; i++){
 		    list.add(0,i);
 		}
 	}
 
 	public static void addElementsToMiddle(List list,
 			int numberOfElementsToAdd) {
-		for(int i = 0; i &lt; numberOfElementsToAdd; i++){
+		for(int i = 0; i < numberOfElementsToAdd; i++){
 		    int middle = list.size()/2;
 		    list.add(middle,i);
 		}
 	}
 
 	public static void addElementsToEnd(List list, int numberOfElementsToAdd) {
-		for(int i = 0; i &lt; numberOfElementsToAdd; i++){
+		for(int i = 0; i < numberOfElementsToAdd; i++){
 		    int last = list.size()-1;
 		    list.add(last,i);
 		}
@@ -35,14 +34,14 @@ public class ListPerformanceEvaluation {
 
 	public static void removeElementsFromBeginning(List list,
 			int numberOfElementsToRemove) {
-		for(int i = 0; i &lt; numberOfElementsToRemove; i++){
+		for(int i = 0; i < numberOfElementsToRemove; i++){
 		    list.remove(0);
 		}
 	}
 
 	public static void removeElementsFromMiddle(List list,
 			int numberOfElementsToRemove) {
-		for(int i = 0; i &lt; numberOfElementsToRemove; i++){
+		for(int i = 0; i < numberOfElementsToRemove; i++){
 		    int middle = list.size()/2;
 		    list.remove(middle);
 		}
@@ -50,15 +49,15 @@ public class ListPerformanceEvaluation {
 
 	public static void removeElementsFromEnd(List list,
 			int numberOfElementsToRemove) {
-		for(int i = 0; i &lt; numberOfElementsToRemove; i++){
+		for(int i = 0; i < numberOfElementsToRemove; i++){
 		    int last = list.size()-1;
 		    list.remove(last);
 		}
 	}
 
 	public static void main(String[] args) {
-		List arrayList = new ArrayList&lt;&gt;();
-		List linkedList = new LinkedList&lt;&gt;();
+		List arrayList = new ArrayList();
+		List linkedList = new LinkedList();
 
 		fillOutList(arrayList, 1_000_000);
 		fillOutList(linkedList, 1_000_000);
@@ -74,7 +73,7 @@ public class ListPerformanceEvaluation {
 		System.out.println("100 element added into the beginning: "
 				+ add100ElementArrayListBeginning);
 
-		arrayList = new ArrayList&lt;&gt;();
+		arrayList = new ArrayList();
 		fillOutList(arrayList, 1_000_000);
 		mill = System.nanoTime();
 		addElementsToMiddle(arrayList, 100);
@@ -83,7 +82,7 @@ public class ListPerformanceEvaluation {
 		System.out.println(
 				"100 element added into the middle: " + add100ElementArrayListMiddle);
 
-		arrayList = new ArrayList&lt;&gt;();
+		arrayList = new ArrayList();
 		fillOutList(arrayList, 1_000_000);
 		mill = System.nanoTime();
 		addElementsToEnd(arrayList, 100);
@@ -92,7 +91,7 @@ public class ListPerformanceEvaluation {
 		System.out
 				.println("100 element added into the end: " + add100ElementArrayListEnd);
 
-		arrayList = new ArrayList&lt;&gt;();
+		arrayList = new ArrayList();
 		fillOutList(arrayList, 1_000_000);
 		mill = System.nanoTime();
 		removeElementsFromBeginning(arrayList, 100);
@@ -101,7 +100,7 @@ public class ListPerformanceEvaluation {
 		System.out.println("100 element removed from the beginning: "
 				+ remove100ElementArrayListBeginning);
 
-		arrayList = new ArrayList&lt;&gt;();
+		arrayList = new ArrayList();
 		fillOutList(arrayList, 1_000_000);
 		mill = System.nanoTime();
 		removeElementsFromMiddle(arrayList, 100);
@@ -110,7 +109,7 @@ public class ListPerformanceEvaluation {
 		System.out.println("100 element removed from the middle: "
 				+ remove100ElementArrayListMiddle);
 
-		arrayList = new ArrayList&lt;&gt;();
+		arrayList = new ArrayList();
 		fillOutList(arrayList, 1_000_000);
 		mill = System.nanoTime();
 		removeElementsFromEnd(arrayList, 100);
@@ -121,7 +120,7 @@ public class ListPerformanceEvaluation {
 
 		// ============== 10.000 elements
 
-		arrayList = new ArrayList&lt;&gt;();
+		arrayList = new ArrayList();
 		fillOutList(arrayList, 1_000_000);
 		mill = System.nanoTime();
 		addElementsToBeginning(arrayList, 10000);
@@ -130,7 +129,7 @@ public class ListPerformanceEvaluation {
 		System.out.println("10.000 element added into the beginning: "
 				+ add10000ElementArrayListBeginning);
 
-		arrayList = new ArrayList&lt;&gt;();
+		arrayList = new ArrayList();
 		fillOutList(arrayList, 1_000_000);
 		mill = System.nanoTime();
 		addElementsToMiddle(arrayList, 10000);
@@ -139,7 +138,7 @@ public class ListPerformanceEvaluation {
 		System.out.println("10.000 element added into the middle: "
 				+ add10000ElementArrayListMiddle);
 
-		arrayList = new ArrayList&lt;&gt;();
+		arrayList = new ArrayList();
 		fillOutList(arrayList, 1_000_000);
 		mill = System.nanoTime();
 		addElementsToEnd(arrayList, 10000);
@@ -148,7 +147,7 @@ public class ListPerformanceEvaluation {
 		System.out.println(
 				"10.000 element added into the end: " + add100000ElementArrayListEnd);
 
-		arrayList = new ArrayList&lt;&gt;();
+		arrayList = new ArrayList();
 		fillOutList(arrayList, 1_000_000);
 		mill = System.nanoTime();
 		removeElementsFromBeginning(arrayList, 10000);
@@ -157,7 +156,7 @@ public class ListPerformanceEvaluation {
 		System.out.println("10.000 element removed from the beginning: "
 				+ remove10000ElementArrayListBeginning);
 
-		arrayList = new ArrayList&lt;&gt;();
+		arrayList = new ArrayList();
 		fillOutList(arrayList, 1_000_000);
 		mill = System.nanoTime();
 		removeElementsFromMiddle(arrayList, 10000);
@@ -166,7 +165,7 @@ public class ListPerformanceEvaluation {
 		System.out.println("10.000 element removed from the middle: "
 				+ remove100000ElementArrayListMiddle);
 
-		arrayList = new ArrayList&lt;&gt;();
+		arrayList = new ArrayList();
 		fillOutList(arrayList, 1_000_000);
 		mill = System.nanoTime();
 		removeElementsFromEnd(arrayList, 10000);
@@ -177,7 +176,7 @@ public class ListPerformanceEvaluation {
 
 		// ============== 100.000 elements
 
-		arrayList = new ArrayList&lt;&gt;();
+		arrayList = new ArrayList();
 		fillOutList(arrayList, 1_000_000);
 		mill = System.nanoTime();
 		addElementsToBeginning(arrayList, 100_000);
@@ -186,7 +185,7 @@ public class ListPerformanceEvaluation {
 		System.out.println("100.000 element added into the beginning: "
 				+ add1000000ElementArrayListBeginning);
 
-		arrayList = new ArrayList&lt;&gt;();
+		arrayList = new ArrayList();
 		fillOutList(arrayList, 1_000_000);
 		mill = System.nanoTime();
 		addElementsToMiddle(arrayList, 100_000);
@@ -195,7 +194,7 @@ public class ListPerformanceEvaluation {
 		System.out.println("100.000 element added into the middle: "
 				+ add1000000ElementArrayListMiddle);
 
-		arrayList = new ArrayList&lt;&gt;();
+		arrayList = new ArrayList();
 		fillOutList(arrayList, 1_000_000);
 		mill = System.nanoTime();
 		addElementsToEnd(arrayList, 100_000);
@@ -204,7 +203,7 @@ public class ListPerformanceEvaluation {
 		System.out.println(
 				"100.000 element added into the end: " + add10000000ElementArrayListEnd);
 
-		arrayList = new ArrayList&lt;&gt;();
+		arrayList = new ArrayList();
 		fillOutList(arrayList, 1_000_000);
 		mill = System.nanoTime();
 		removeElementsFromBeginning(arrayList, 100_000);
@@ -213,7 +212,7 @@ public class ListPerformanceEvaluation {
 		System.out.println("100.000 element removed from the beginning: "
 				+ remove1000000ElementArrayListBeginning);
 
-		arrayList = new ArrayList&lt;&gt;();
+		arrayList = new ArrayList();
 		fillOutList(arrayList, 1_000_000);
 		mill = System.nanoTime();
 		removeElementsFromMiddle(arrayList, 100_000);
@@ -222,7 +221,7 @@ public class ListPerformanceEvaluation {
 		System.out.println("100.000 element removed from the middle: "
 				+ remove10000000ElementArrayListMiddle);
 
-		arrayList = new ArrayList&lt;&gt;();
+		arrayList = new ArrayList();
 		fillOutList(arrayList, 1_000_000);
 		mill = System.nanoTime();
 		removeElementsFromEnd(arrayList, 100_000);
@@ -242,7 +241,7 @@ public class ListPerformanceEvaluation {
 		System.out.println("100 element added into the beginning: "
 				+ add100ElementLinkedListBeginning);
 
-		linkedList = new LinkedList&lt;&gt;();
+		linkedList = new LinkedList();
 		fillOutList(linkedList, 1_000_000);
 		mill = System.nanoTime();
 		addElementsToMiddle(linkedList, 100);
@@ -251,7 +250,7 @@ public class ListPerformanceEvaluation {
 		System.out.println(
 				"100 element added into the middle: " + add100ElementLinkedListMiddle);
 
-		linkedList = new LinkedList&lt;&gt;();
+		linkedList = new LinkedList();
 		fillOutList(linkedList, 1_000_000);
 		mill = System.nanoTime();
 		addElementsToEnd(linkedList, 100);
@@ -260,7 +259,7 @@ public class ListPerformanceEvaluation {
 		System.out
 				.println("100 element added into the end: " + add100ElementLinkedListEnd);
 
-		linkedList = new LinkedList&lt;&gt;();
+		linkedList = new LinkedList();
 		fillOutList(linkedList, 1_000_000);
 		mill = System.nanoTime();
 		removeElementsFromBeginning(linkedList, 100);
@@ -269,7 +268,7 @@ public class ListPerformanceEvaluation {
 		System.out.println("100 element removed from the beginning: "
 				+ remove100ElementLinkedListBeginning);
 
-		linkedList = new LinkedList&lt;&gt;();
+		linkedList = new LinkedList();
 		fillOutList(linkedList, 1_000_000);
 		mill = System.nanoTime();
 		removeElementsFromMiddle(linkedList, 100);
@@ -278,7 +277,7 @@ public class ListPerformanceEvaluation {
 		System.out.println("100 element removed from the middle: "
 				+ remove100ElementLinkedListMiddle);
 
-		linkedList = new LinkedList&lt;&gt;();
+		linkedList = new LinkedList();
 		fillOutList(linkedList, 1_000_000);
 		mill = System.nanoTime();
 		removeElementsFromEnd(linkedList, 100);
@@ -289,7 +288,7 @@ public class ListPerformanceEvaluation {
 
 		// ============== 10.000 elements
 
-		linkedList = new LinkedList&lt;&gt;();
+		linkedList = new LinkedList();
 		fillOutList(linkedList, 1_000_000);
 		mill = System.nanoTime();
 		addElementsToBeginning(linkedList, 10000);
@@ -298,7 +297,7 @@ public class ListPerformanceEvaluation {
 		System.out.println("10.000 element added into the beginning: "
 				+ add10000ElementLinkedListBeginning);
 
-		linkedList = new LinkedList&lt;&gt;();
+		linkedList = new LinkedList();
 		fillOutList(linkedList, 1_000_000);
 		mill = System.nanoTime();
 		addElementsToMiddle(linkedList, 10000);
@@ -307,7 +306,7 @@ public class ListPerformanceEvaluation {
 		System.out.println("10.000 element added into the middle: "
 				+ add10000ElementLinkedListMiddle);
 
-		linkedList = new LinkedList&lt;&gt;();
+		linkedList = new LinkedList();
 		fillOutList(linkedList, 1_000_000);
 		mill = System.nanoTime();
 		addElementsToEnd(linkedList, 10000);
@@ -316,7 +315,7 @@ public class ListPerformanceEvaluation {
 		System.out.println(
 				"10.000 element added into the end: " + add100000ElementLinkedListEnd);
 
-		linkedList = new LinkedList&lt;&gt;();
+		linkedList = new LinkedList();
 		fillOutList(linkedList, 1_000_000);
 		mill = System.nanoTime();
 		removeElementsFromBeginning(linkedList, 10000);
@@ -325,7 +324,7 @@ public class ListPerformanceEvaluation {
 		System.out.println("10.000 element removed from the beginning: "
 				+ remove10000ElementLinkedListBeginning);
 
-		linkedList = new LinkedList&lt;&gt;();
+		linkedList = new LinkedList();
 		fillOutList(linkedList, 1_000_000);
 		mill = System.nanoTime();
 		removeElementsFromMiddle(linkedList, 10000);
@@ -334,7 +333,7 @@ public class ListPerformanceEvaluation {
 		System.out.println("10.000 element removed from the middle: "
 				+ remove100000ElementLinkedListMiddle);
 
-		linkedList = new LinkedList&lt;&gt;();
+		linkedList = new LinkedList();
 		fillOutList(linkedList, 1_000_000);
 		mill = System.nanoTime();
 		removeElementsFromEnd(linkedList, 10000);
@@ -345,7 +344,7 @@ public class ListPerformanceEvaluation {
 
 		// ============== 100.000 elements
 
-		linkedList = new LinkedList&lt;&gt;();
+		linkedList = new LinkedList();
 		fillOutList(linkedList, 1_000_000);
 		mill = System.nanoTime();
 		addElementsToBeginning(linkedList, 100_000);
@@ -355,7 +354,7 @@ public class ListPerformanceEvaluation {
 				+ add1000000ElementLinkedListBeginning);
 
 		// *Commented because method takes very-very long time 
-//		linkedList = new LinkedList&lt;&gt;();
+//		linkedList = new LinkedList();
 //		fillOutList(linkedList, 1_000_000);
 //		mill = System.nanoTime();
 //		addElementsToMiddle(linkedList, 100_000);
@@ -364,7 +363,7 @@ public class ListPerformanceEvaluation {
 //		System.out.println("100.000 element added into the middle: "
 //				+ add1000000ElementLinkedListMiddle);
 
-		linkedList = new LinkedList&lt;&gt;();
+		linkedList = new LinkedList();
 		fillOutList(linkedList, 1_000_000);
 		mill = System.nanoTime();
 		addElementsToEnd(linkedList, 100_000);
@@ -373,7 +372,7 @@ public class ListPerformanceEvaluation {
 		System.out.println(
 				"100.000 element added into the end: " + add10000000ElementLinkedListEnd);
 
-		linkedList = new LinkedList&lt;&gt;();
+		linkedList = new LinkedList();
 		fillOutList(linkedList, 1_000_000);
 		mill = System.nanoTime();
 		removeElementsFromBeginning(linkedList, 100_000);
@@ -383,7 +382,7 @@ public class ListPerformanceEvaluation {
 				+ remove1000000ElementLinkedListBeginning);
 
 		// *Commented because method takes very-very long time 
-//		linkedList = new LinkedList&lt;&gt;();
+//		linkedList = new LinkedList();
 //		fillOutList(linkedList, 1_000_000);
 //		mill = System.nanoTime();
 //		removeElementsFromMiddle(linkedList, 100_000);
@@ -392,7 +391,7 @@ public class ListPerformanceEvaluation {
 //		System.out.println("100.000 element removed from the middle: "
 //				+ remove10000000ElementLinkedListMiddle);
 
-		linkedList = new LinkedList&lt;&gt;();
+		linkedList = new LinkedList();
 		fillOutList(linkedList, 1_000_000);
 		mill = System.nanoTime();
 		removeElementsFromEnd(linkedList, 100_000);
